@@ -10,6 +10,8 @@
 				buttons += '<form action="/upload" method="POST" enctype="multipart/form-data">';
 				buttons += '<label for="fm' + i + '">Family Member ' + i + ':</label>';
 				buttons += '<input type="file" id="fm' + i + '" name="fm' + i + '"><br><br>';
+				buttons += '<label for="notes' + i + '">Notes:</label>';
+				buttons += '<textarea id="notes' + i + '" name="notes' + i + '"></textarea><br><br>';
 				buttons += '<input type="submit" value="Upload">';
 				buttons += '</form>';
 			}
