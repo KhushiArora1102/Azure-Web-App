@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Azure Web App</title>
+	<script>
+		function createButtons() {
+			var numFamilyMembers = document.getElementById("numFamilyMembers").value;
+			var buttons = "";
+			for (var i = 1; i <= numFamilyMembers; i++) {
+				buttons += '<form action="/upload" method="POST" enctype="multipart/form-data">';
+				buttons += '<label for="fm' + i + '">Family Member ' + i + ':</label>';
+				buttons += '<input type="file" id="fm' + i + '" name="fm' + i + '"><br><br>';
+				buttons += '<input type="submit" value="Upload">';
+				buttons += '</form>';
+			}
+			document.getElementById("familyMemberButtons").innerHTML = buttons;
+		}
+	</script>
+</head>
+<body>
+	<h1>Upload Health Reports</h1>
+	
+	<label for="numFamilyMembers">Number of Family Members:</label>
+	<input type="number" id="numFamilyMembers" name="numFamilyMembers" min="1" max="10"><br><br>
+	<button onclick="createButtons()">Create Buttons</button><br><br>
+	
+	<div id="familyMemberButtons"></div>
+	
+	<h2>View Reports</h2>
+	<button onclick="displayReports()">Display Reports</button><br><br>
+	
+	<ul id="reportList"></ul>
+	
+	
+</body>
+</html>
