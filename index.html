@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Azure Web App</title>
-	<script>
-		function createButtons() {
-			var numFamilyMembers = document.getElementById("numFamilyMembers").value;
-			var buttons = "";
-			for (var i = 1; i <= numFamilyMembers; i++) {
-				buttons += '<"form action="/upload" method="POST" type="submit" enctype="multipart/form-data">';
-				buttons += '<label for="fm' + i + '">Family Member ' + i + ':</label>';
-				buttons += '<input type="file" id="fm' + i + '" name="fm' + i + '"><br><br>';
-				buttons += '<label for="notes' + i + '">Notes:</label>';
-				buttons += '<textarea id="notes' + i + '" name="notes' + i + '"></textarea><br><br>';
-				buttons += '<input type="submit" value="Upload">';
-				buttons += '</form>';
-			}
-			document.getElementById("familyMemberButtons").innerHTML = buttons;
-			
-		}
-	</script>
+    <title>Azure Web App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function redirectToUploadPage() {
+            window.location.href = "upload-page.html"; 
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjByZXBvcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .upload-container {
+            text-align: center;
+        }
+
+        .upload-button {
+            background: none;
+            color: black;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .upload-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-        <title>Azure Web App</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-	<h1>Upload Health Reports</h1>
-	
-	<label for="numFamilyMembers">Number of Family Members:</label>
-	<input type="number" id="numFamilyMembers" name="numFamilyMembers" min="1" max="10"><br><br>
-	<button onclick="createButtons()">Create Buttons</button><br><br>
-	
-	<div id="familyMemberButtons"></div>
-	
-	<h2>View Reports</h2>
-	<button onclick="displayReports()">Display Reports</button><br><br>
-	<ul id="reportList"></ul>
+    <div class="upload-container">
+        <h1 class="upload-button" onclick="redirectToUploadPage()">Your Health, Your Data, Our Care: Upload Your Reports here!</h1>
+    </div>
 </body>
 </html>
