@@ -1,3 +1,2 @@
 # Azure-Web-App
-We sometimes misplace our very important medical records or files due to which we may have to face consequences. To avoid such a problem, I have developed an 
-Azure web app which will let you upload and maintain your as well as your loved one's medical records. 
+This is a web application hosted on Azure that provides a convenient way for you and your family to securely upload and store health reports. This application simplifies the process of organizing and accessing your medical records, ensuring that important health information is readily available whenever you need it.
