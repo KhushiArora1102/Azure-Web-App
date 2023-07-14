@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .contact-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Adjust the width as per your preference */
+            margin: 0 auto;
+        }
+
+        .contact-head {
+            margin-bottom: 20px;
+        }
+
+        .form-element {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-control {
+            width: 80%; /* Adjust the width as per your preference */
+            max-width: 400px; /* Set a maximum width to prevent overflowing on larger screens */
+            margin: 0 auto;
+        }
+
+        textarea {
+            resize: vertical;
+            width: 80%; /* Adjust the width as per your preference */
+            max-width: 400px; /* Set a maximum width to prevent overflowing on larger screens */
+            margin: 0 auto;
+        }
+
+        .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-image {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-container">
+            <h2 class="contact-head">Contact Us</h2>
+            <form>
+                <div class="form-element">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your name" value="">
+                </div>
+                <div class="form-element">    
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your email" value="">
+                </div>
+                <div class="form-element">
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/khushi-arora-2583401b9/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/Khushi__aroraa" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/khushi__aroraa/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

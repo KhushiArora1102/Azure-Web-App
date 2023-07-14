@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #333;
 }
 
 .container {
@@ -72,4 +73,21 @@ input[type="submit"]:hover {
 
 .display-reports:hover {
     background-color: #0056b3;
+}
+.form-element {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-control {
+    width: 80%; 
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+textarea {
+    resize: vertical;
+    width: 80%; 
+    max-width: 400px; 
+    margin: 0 auto;
 }
